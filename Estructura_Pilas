@@ -1,0 +1,45 @@
+class Pila:
+    def __init__(self, capacidad_max):
+        self.capacidad_max = capacidad_max
+        self.pila = []
+        self.tope = 0
+
+    def insertar(self, elemento):
+        if self.tope < self.capacidad_max:
+            self.pila.append(elemento)
+            self.tope += 1
+            print(f"Insertar({elemento}): Pila -> {self.pila}, TOPE = {self.tope}")
+        else:
+            print(f"Error: Pila llena. No se puede insertar {elemento}.")
+    
+    def eliminar(self):
+        if self.tope > 0:
+            elemento_elim = self.pila.pop()
+            self.tope -= 1
+            print(f"Eliminar(): Se eliminó {elemento_elim}. Pila -> {self.pila}, TOPE = {self.tope}")
+        else:
+            print("Error: Pila vacía. No se puede eliminar.")
+
+def menu():
+    print("\nOpciones:")
+    print("1. Insertar elemento")
+    print("2. Eliminar elemento")
+    print("3. Salir")
+    return int(input("Selecciona una opción: "))
+
+# Capacidad máxima de la pila es 8
+pila = Pila(8)
+
+while True:
+    opcion = menu()
+    
+    if opcion == 1:
+        elemento = input("Introduce el valor a insertar en la pila: ")
+        pila.insertar(elemento)
+    elif opcion == 2:
+        pila.eliminar()
+    elif opcion == 3:
+        print("Saliendo del programa.")
+        break
+    else:
+        print("Opción no válida. Intenta de nuevo.")

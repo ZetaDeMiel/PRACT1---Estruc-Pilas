@@ -1,1 +1,3 @@
-# PRACT1---Estruc-Pilas
+En este caso, cuando el codigo se ejecuto y siguio el orden de operaciones señalado, quedaron como ultimo resultado "V, R", donde estos quedaron en la lista creada y se guardo el resultado, siendo como conclusion que solo 2 elementos quedaron como resultado.
+
+Siguiendo el orden de las indicaciones, se visualizo que un caso de error, siendo esta un subdesbordamiento, ya que se intentaron eliminar objetos cuando ya no quedaba ninguno, siendo que esta dio error. Pero en el caso de desbordamiento, no ocurrio, debido a que no se intetaron meter mas del limite de 8 digitos a la pila creada, quedando como conclusion que hubo un error, el cual fue subdesbordamiento.
